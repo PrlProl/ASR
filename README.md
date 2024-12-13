@@ -23,7 +23,7 @@
 
 Для работы с PostgreSQL необходимо создать базу данных и таблицы для хранения документов и их векторов. Пример SQL-запросов для создания таблиц:
 
-```sql
+sql
 CREATE TABLE documents (
     id SERIAL PRIMARY KEY,
     text TEXT,
@@ -37,7 +37,9 @@ CREATE TABLE vectors (
 conn = psycopg2.connect(
     dbname="document_db", user="postgres", password="123", host="localhost", port="8080"
 )
-4. Пример запроса
+
+
+ Пример запроса
 Для поиска похожих документов отправьте текстовый запрос в чат с ботом. Бот вернет наиболее похожий документ из базы данных.
 
 Обоснование выбора метрик
